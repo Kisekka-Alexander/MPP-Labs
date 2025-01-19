@@ -1,10 +1,10 @@
 package lab4.probc;
 
-public record Paycheck(double grossPay, double fica,
+public record PayCheck(double grossPay, double fica,
                        double state, double local, double medicare,
                        double socialSecurity) {
 
-    public Paycheck {
+    public PayCheck {
         if(grossPay < 0 || fica < 0 || state < 0 || local < 0 || medicare < 0 || socialSecurity < 0) {
             throw new IllegalArgumentException("Invalid parameters");
         }
