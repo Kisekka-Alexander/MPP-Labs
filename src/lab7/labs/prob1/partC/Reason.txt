@@ -1,0 +1,1 @@
+HashMap is being used yet the hashcode method was not overriden.

@@ -1,0 +1,2 @@
+The equals method currently depends on visited.
+Employee objects with identical name and salary but different visited statuses are treated as unequal which is incorrect.
