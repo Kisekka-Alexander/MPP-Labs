@@ -1,0 +1,3 @@
+a. Compiler Error: nums.add(3.14);
+
+b. Compiler Error: double dbl = sum(ints);
