@@ -11,7 +11,7 @@ public class Main {
 	public static void main(String[] args) {
 		System.out.println(allWhoseZipContains3());
 //		System.out.println(allHavingOverdueBook());
-//		System.out.println(allHavingMultipleAuthors());
+		System.out.println(allHavingMultipleAuthors());
 
 	}
 	//Returns a list of all ids of LibraryMembers whose zipcode contains the digit 3
@@ -45,8 +45,12 @@ public class Main {
 		Collection<Book> books = da.readBooksMap().values();
 		List<Book> bs = new ArrayList<>();
 		bs.addAll(books);
+
 		//implement
-		return null;
+		return bs.stream()
+				.filter(bk -> bk.getAuthors().size() > 1)
+				.map(Book::getIsbn)
+				.collect(Collectors.toList());
 		
 		}
 
