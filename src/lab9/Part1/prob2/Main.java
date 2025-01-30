@@ -15,6 +15,10 @@ public class Main {
 	private void showAllOrderItems() {
 		System.out.println("\n==============\nAll order items:");
 		//implement
+		List<OrderItem> orderItems = orders.stream()
+				.flatMap(order -> order.getOrderItems().stream())
+				.toList();
+		System.out.println(orderItems);
 	}
 	
 	private void displayAllOrders() {
